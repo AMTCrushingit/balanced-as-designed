@@ -36,18 +36,18 @@ a{text-decoration:none;color:inherit;}
   --border-gold: rgba(214,161,64,0.28);
   --max:1200px;
   /* font scale ×1.25 */
-  --fs-eyebrow:13.75px;
-  --fs-body-sm:16.25px;
-  --fs-body:   17.5px;
-  --fs-lead:   21.25px;
-  --fs-h3:     27.5px;
-  --fs-nav-link:16.25px;
-  --fs-nav-name:21px;
-  --fs-nav-sub: 10px;
-  --fs-stat:   37.5px;
-  --fs-stat-lbl:15px;
-  --fs-footer-sm:15px;
-  --fs-footer-lbl:13.75px;
+  --fs-eyebrow:12.4px;
+  --fs-body-sm:14.6px;
+  --fs-body:   15.75px;
+  --fs-lead:   19.1px;
+  --fs-h3:     24.75px;
+  --fs-nav-link:14.6px;
+  --fs-nav-name:18.9px;
+  --fs-nav-sub: 9px;
+  --fs-stat:   33.75px;
+  --fs-stat-lbl:13.5px;
+  --fs-footer-sm:13.5px;
+  --fs-footer-lbl:12.4px;
 }
 
 /* ─── ANIMATIONS ────────────────────────────────────────────── */
@@ -157,9 +157,9 @@ nav{
 
 .mob-nav{display:none;position:fixed;top:80px;left:0;right:0;background:rgba(26,30,33,0.99);backdrop-filter:blur(20px);padding:24px 32px;flex-direction:column;gap:4px;z-index:10000;border-bottom:1px solid var(--border);}
 .mob-nav.open{display:flex!important;}
-.mob-link{font-size:20px;font-weight:600;color:var(--muted);padding:14px 0;border-bottom:1px solid var(--border);display:block;}
+.mob-link{font-size:18px;font-weight:600;color:var(--muted);padding:14px 0;border-bottom:1px solid var(--border);display:block;}
 .mob-link:hover{color:var(--green);}
-.mob-cta{background:var(--green);color:#fff;font-weight:800;padding:14px;border-radius:10px;text-align:center;margin-top:12px;font-size:18px;display:block;}
+.mob-cta{background:var(--green);color:#fff;font-weight:800;padding:14px;border-radius:10px;text-align:center;margin-top:12px;font-size:16.2px;display:block;}
 
 @media(max-width:1100px){.nav-links{display:none!important;}.hamburger{display:flex!important;}}
 @media(max-width:768px){nav{padding:0 20px!important;height:68px!important;}.mob-nav{top:68px!important;}}
@@ -173,24 +173,24 @@ nav{
 /* ─── TYPOGRAPHY ────────────────────────────────────────────── */
 .eyebrow{font-size:var(--fs-eyebrow);font-weight:800;text-transform:uppercase;letter-spacing:4px;color:var(--green);display:block;margin-bottom:16px;}
 .eyebrow-gold{font-size:var(--fs-eyebrow);font-weight:800;text-transform:uppercase;letter-spacing:4px;color:var(--gold);display:block;margin-bottom:16px;}
-.h1{font-family:"Manrope",sans-serif;font-size:clamp(47px,5vw,80px);font-weight:900;color:var(--light);line-height:1.08;letter-spacing:-1px;}
-.h2{font-family:"Manrope",sans-serif;font-size:clamp(34px,4vw,54px);font-weight:800;color:var(--light);line-height:1.15;letter-spacing:-0.5px;}
+.h1{font-family:"Manrope",sans-serif;font-size:clamp(42px,4.5vw,72px);font-weight:900;color:var(--light);line-height:1.08;letter-spacing:-1px;}
+.h2{font-family:"Manrope",sans-serif;font-size:clamp(30px,3.6vw,48px);font-weight:800;color:var(--light);line-height:1.15;letter-spacing:-0.5px;}
 .h3{font-family:"Manrope",sans-serif;font-size:var(--fs-h3);font-weight:800;color:var(--light);}
 .lead{font-size:var(--fs-lead);color:var(--muted);line-height:1.8;}
 .green{color:var(--green);}
 .gold{color:var(--gold);}
 
 /* ─── HERO ──────────────────────────────────────────────────── */
-.hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:120px 48px 80px;}
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:flex-start;overflow:hidden;padding:120px 80px 80px;}
 .hero-bg{
   position:absolute;inset:0;z-index:0;
-  background:url('https://www.therma.com/wp-content/uploads/2020/09/SER_TAB04-scaled-uai-1706x1280.jpg') center center/cover no-repeat;
+  background:url('AA_hvac.jpg') center center/cover no-repeat;
 }
 /* heavier dim — image is backdrop only */
 .hero-bg::after{content:"";position:absolute;inset:0;background:rgba(15,19,22,0.80);}
 .hero-grid{position:absolute;inset:0;z-index:1;background:repeating-linear-gradient(0deg,transparent,transparent 59px,rgba(47,184,121,0.025) 59px,rgba(47,184,121,0.025) 60px),repeating-linear-gradient(90deg,transparent,transparent 59px,rgba(47,184,121,0.025) 59px,rgba(47,184,121,0.025) 60px);pointer-events:none;}
-.hero-inner{position:relative;z-index:2;max-width:860px;width:100%;text-align:center;display:flex;flex-direction:column;align-items:center;}
-.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-top:36px;justify-content:center;}
+.hero-inner{position:relative;z-index:2;max-width:780px;width:100%;text-align:left;display:flex;flex-direction:column;align-items:flex-start;margin-left:0;}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-top:36px;justify-content:flex-start;}
 .btn-primary{background:var(--green);color:#fff;font-size:var(--fs-body);font-weight:800;padding:16px 36px;border-radius:8px;transition:all 0.2s;display:inline-flex;align-items:center;gap:8px;}
 .btn-primary:hover{background:var(--green2);transform:translateY(-2px);box-shadow:0 8px 32px rgba(47,184,121,0.35);}
 .btn-outline{background:transparent;color:var(--light);font-size:var(--fs-body);font-weight:700;padding:16px 36px;border-radius:8px;border:1.5px solid rgba(255,255,255,0.25);transition:all 0.2s;display:inline-flex;align-items:center;gap:8px;}
@@ -207,10 +207,10 @@ nav{
 .service-hero-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s;filter:brightness(0.55) saturate(0.8);}
 .service-hero-card:hover img{transform:scale(1.04);filter:brightness(0.65) saturate(0.9);}
 .service-hero-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:32px;background:linear-gradient(to top,rgba(15,19,22,0.95) 0%,rgba(15,19,22,0.5) 55%,transparent 100%);}
-.service-hero-tag{display:inline-flex;align-items:center;gap:6px;border-radius:4px;padding:5px 14px;font-size:12.5px;font-weight:800;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;width:fit-content;}
+.service-hero-tag{display:inline-flex;align-items:center;gap:6px;border-radius:4px;padding:5px 14px;font-size:11.25px;font-weight:800;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;width:fit-content;}
 .service-hero-tag.green{background:rgba(47,184,121,0.15);border:1px solid var(--border-green);color:var(--green);}
 .service-hero-tag.gold{background:rgba(214,161,64,0.15);border:1px solid var(--border-gold);color:var(--gold);}
-.service-hero-title{font-family:"Manrope",sans-serif;font-size:30px;font-weight:900;color:#fff;margin-bottom:8px;line-height:1.2;}
+.service-hero-title{font-family:"Manrope",sans-serif;font-size:27px;font-weight:900;color:#fff;margin-bottom:8px;line-height:1.2;}
 .service-hero-desc{font-size:var(--fs-body-sm);color:rgba(255,255,255,0.75);line-height:1.6;margin-bottom:16px;}
 .service-hero-link{display:inline-flex;align-items:center;gap:6px;font-size:var(--fs-body-sm);font-weight:800;transition:gap 0.2s;}
 .service-hero-link.green{color:var(--green);}
@@ -226,7 +226,7 @@ nav{
 .tab-img::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(47,184,121,0.12) 0%,transparent 60%);}
 .tab-step{display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);}
 .tab-step:last-child{border-bottom:none;}
-.tab-step-num{width:38px;height:38px;border-radius:8px;background:rgba(47,184,121,0.1);border:1px solid var(--border-green);display:flex;align-items:center;justify-content:center;font-family:"Sora",sans-serif;font-size:17.5px;font-weight:900;color:var(--green);flex-shrink:0;}
+.tab-step-num{width:38px;height:38px;border-radius:8px;background:rgba(47,184,121,0.1);border:1px solid var(--border-green);display:flex;align-items:center;justify-content:center;font-family:"Sora",sans-serif;font-size:15.75px;font-weight:900;color:var(--green);flex-shrink:0;}
 .tab-step-title{font-size:var(--fs-body);font-weight:800;color:var(--light);margin-bottom:4px;}
 .tab-step-desc{font-size:var(--fs-body-sm);color:var(--muted);line-height:1.6;}
 
@@ -260,7 +260,7 @@ nav{
 }
 .cx-phase{display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);}
 .cx-phase:last-child{border-bottom:none;}
-.cx-phase-num{width:38px;height:38px;border-radius:8px;background:rgba(214,161,64,0.1);border:1px solid var(--border-gold);display:flex;align-items:center;justify-content:center;font-family:"Sora",sans-serif;font-size:17.5px;font-weight:900;color:var(--gold);flex-shrink:0;}
+.cx-phase-num{width:38px;height:38px;border-radius:8px;background:rgba(214,161,64,0.1);border:1px solid var(--border-gold);display:flex;align-items:center;justify-content:center;font-family:"Sora",sans-serif;font-size:15.75px;font-weight:900;color:var(--gold);flex-shrink:0;}
 .cx-phase-title{font-size:var(--fs-body);font-weight:800;color:var(--light);margin-bottom:4px;}
 .cx-phase-desc{font-size:var(--fs-body-sm);color:var(--muted);line-height:1.6;}
 
@@ -270,7 +270,7 @@ nav{
 .compare-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;border-radius:20px 20px 0 0;}
 .compare-card.tab::before{background:linear-gradient(90deg,var(--green),var(--green2));}
 .compare-card.cx::before{background:linear-gradient(90deg,var(--gold),var(--gold2));}
-.compare-tag{display:inline-flex;align-items:center;gap:6px;border-radius:4px;padding:5px 14px;font-size:12.5px;font-weight:800;text-transform:uppercase;letter-spacing:2px;margin-bottom:16px;}
+.compare-tag{display:inline-flex;align-items:center;gap:6px;border-radius:4px;padding:5px 14px;font-size:11.25px;font-weight:800;text-transform:uppercase;letter-spacing:2px;margin-bottom:16px;}
 .compare-tag.green{background:rgba(47,184,121,0.1);border:1px solid var(--border-green);color:var(--green);}
 .compare-tag.gold{background:rgba(214,161,64,0.1);border:1px solid var(--border-gold);color:var(--gold);}
 .compare-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:16px;}
@@ -326,7 +326,7 @@ nav{
 }
 .project-name{
   font-family:"Manrope",sans-serif;
-  font-size:20px;font-weight:800;
+  font-size:18px;font-weight:800;
   color:var(--light);line-height:1.25;
 }
 .project-tag{
@@ -351,8 +351,8 @@ nav{
 /* ─── WHY ───────────────────────────────────────────────────── */
 .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
 .why-card{padding:28px 22px;border-left:3px solid var(--green);background:var(--dark2);border-radius:0 12px 12px 0;}
-.why-num{font-family:"Sora",sans-serif;font-size:45px;font-weight:900;color:rgba(47,184,121,0.15);line-height:1;margin-bottom:10px;}
-.why-title{font-size:18.75px;font-weight:800;color:var(--light);margin-bottom:8px;}
+.why-num{font-family:"Sora",sans-serif;font-size:40.5px;font-weight:900;color:rgba(47,184,121,0.15);line-height:1;margin-bottom:10px;}
+.why-title{font-size:16.9px;font-weight:800;color:var(--light);margin-bottom:8px;}
 .why-desc{font-size:var(--fs-body-sm);color:var(--muted);line-height:1.7;}
 
 /* ─── IMAGE BAND ────────────────────────────────────────────── */
@@ -371,7 +371,7 @@ nav{
 .contact-item{display:flex;align-items:flex-start;gap:16px;margin-bottom:24px;}
 .contact-icon{width:50px;height:50px;border-radius:10px;background:rgba(47,184,121,0.1);border:1px solid var(--border-green);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}
 .contact-label{font-size:var(--fs-footer-lbl);font-weight:800;text-transform:uppercase;letter-spacing:2px;color:var(--green);margin-bottom:4px;}
-.contact-value{font-size:18.75px;color:var(--light);font-weight:600;}
+.contact-value{font-size:16.9px;color:var(--light);font-weight:600;}
 .contact-form{background:var(--dark2);border:1px solid var(--border);border-radius:20px;padding:40px;}
 .form-group{margin-bottom:20px;}
 .form-label{display:block;font-size:15px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
@@ -392,8 +392,8 @@ footer{background:#0D1013;padding:60px 0 0;border-top:1px solid var(--border);}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;padding-bottom:48px;}
 
 /* footer logo mirrors nav logo */
-.footer-logo-balanced{font-family:"Cormorant Garamond",Georgia,serif;font-size:26px;font-weight:700;color:#1A3D2B;letter-spacing:0.5px;line-height:1;}
-.footer-logo-as{font-family:"Cormorant Garamond",Georgia,serif;font-size:20px;font-style:italic;font-weight:400;color:var(--green);line-height:1.1;margin-top:1px;}
+.footer-logo-balanced{font-family:"Cormorant Garamond",Georgia,serif;font-size:23.4px;font-weight:700;color:#1A3D2B;letter-spacing:0.5px;line-height:1;}
+.footer-logo-as{font-family:"Cormorant Garamond",Georgia,serif;font-size:18px;font-style:italic;font-weight:400;color:var(--green);line-height:1.1;margin-top:1px;}
 .footer-logo-divider{display:flex;align-items:center;margin:5px 0 4px;}
 .footer-logo-divider-line{flex:1;height:1px;background:var(--gold);max-width:120px;}
 .footer-logo-divider-dot{width:4px;height:4px;border-radius:50%;background:var(--gold);margin:0 4px;}
@@ -532,31 +532,16 @@ footer{background:#0D1013;padding:60px 0 0;border-top:1px solid var(--border);}
 <div class="hero-bg"></div>
 <div class="hero-grid"></div>
 <div class="hero-inner">
-<h1 class="h1" style="margin-bottom:24px;">
-<span class="green">One Standard:</span><br/>
-<span style="color:#fff;">Performance as Designed.</span>
+<h1 class="h1" style="margin-bottom:20px;">
+Mechanical Systems<br/>
+<span class="green">Verified.</span>
 </h1>
-<p class="lead" style="max-width:620px;margin-bottom:32px;">
-      Balanced as Designed provides specialist Testing, Adjusting and Balancing (TAB)
-      and HVAC Commissioning services across the Bahamas and Caribbean. We verify that
-      your mechanical systems deliver what the engineer specified.
-    </p>
-<div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-bottom:8px;">
-<div style="display:flex;align-items:center;gap:10px;background:rgba(47,184,121,0.12);border:1px solid var(--border-green);border-radius:10px;padding:12px 20px;">
-<span style="font-size:22px;">⚖</span>
-<div>
-<div style="font-size:var(--fs-body);font-weight:800;color:var(--green);">Testing, Adjusting and Balancing</div>
-<div style="font-size:var(--fs-body-sm);color:var(--muted);">Verify system performance at handover</div>
-</div>
-</div>
-<div style="display:flex;align-items:center;gap:10px;background:rgba(214,161,64,0.12);border:1px solid var(--border-gold);border-radius:10px;padding:12px 20px;">
-<span style="font-size:22px;">⚙️</span>
-<div>
-<div style="font-size:var(--fs-body);font-weight:800;color:var(--gold);">HVAC Commissioning</div>
-<div style="font-size:var(--fs-body-sm);color:var(--muted);">Systematic verification from design to operation</div>
-</div>
-</div>
-</div>
+<p style="font-family:'Manrope',sans-serif;font-size:clamp(16px,2vw,23px);font-weight:700;color:rgba(232,237,245,0.88);line-height:1.35;margin-bottom:24px;">
+Independent TAB &amp; HVAC Commissioning Services<br/>Across The Bahamas &amp; the Caribbean.
+</p>
+<p class="lead" style="max-width:640px;margin-bottom:36px;">
+Balanced as Designed provides specialist Testing, Adjusting &amp; Balancing (TAB) and HVAC Commissioning services that verify your systems perform as designed.
+</p>
 <div class="hero-ctas">
 <a class="btn-primary" href="#contact">Request an Assessment</a>
 <a class="btn-outline" href="#services">Our Services</a>
@@ -620,7 +605,7 @@ footer{background:#0D1013;padding:60px 0 0;border-top:1px solid var(--border);}
 <div class="img-band-content">
 <div style="max-width:600px;">
 <div style="font-size:var(--fs-eyebrow);font-weight:800;text-transform:uppercase;letter-spacing:4px;color:var(--green);margin-bottom:14px;">Our Commitment</div>
-<div style="font-family:Manrope,sans-serif;font-size:clamp(27px,3vw,42px);font-weight:800;color:#fff;line-height:1.2;margin-bottom:16px;">"We do not leave a building until the numbers match the design."</div>
+<div style="font-family:Manrope,sans-serif;font-size:clamp(24px,2.7vw,38px);font-weight:800;color:#fff;line-height:1.2;margin-bottom:16px;">"We do not leave a building until the numbers match the design."</div>
 <div style="font-size:var(--fs-body);color:rgba(255,255,255,0.6);">Karen Myers-Rolle, PE. Principal, Balanced as Designed.</div>
 </div>
 </div>
@@ -768,7 +753,7 @@ footer{background:#0D1013;padding:60px 0 0;border-top:1px solid var(--border);}
 <div class="img-band-content">
 <div style="max-width:640px;">
 <div style="font-size:var(--fs-eyebrow);font-weight:800;text-transform:uppercase;letter-spacing:4px;color:var(--gold);margin-bottom:14px;">Why It Matters</div>
-<div style="font-family:Manrope,sans-serif;font-size:clamp(25px,3vw,40px);font-weight:800;color:#fff;line-height:1.25;margin-bottom:16px;">Commissioned buildings use 8 to 20% less energy. Balanced systems last longer, cost less to operate, and keep occupants comfortable.</div>
+<div style="font-family:Manrope,sans-serif;font-size:clamp(22px,2.7vw,36px);font-weight:800;color:#fff;line-height:1.25;margin-bottom:16px;">Commissioned buildings use 8 to 20% less energy. Balanced systems last longer, cost less to operate, and keep occupants comfortable.</div>
 <a class="btn-primary" href="#contact">Start a Conversation</a>
 </div>
 </div>
@@ -935,7 +920,7 @@ footer{background:#0D1013;padding:60px 0 0;border-top:1px solid var(--border);}
 <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;">
 <div>
 <div style="font-size:var(--fs-eyebrow);font-weight:800;text-transform:uppercase;letter-spacing:3px;color:var(--green);margin-bottom:8px;">Our Story</div>
-<div style="font-family:Manrope,sans-serif;font-size:25px;font-weight:800;color:var(--light);margin-bottom:6px;">From Division to Specialist Brand</div>
+<div style="font-family:Manrope,sans-serif;font-size:22.5px;font-weight:800;color:var(--light);margin-bottom:6px;">From Division to Specialist Brand</div>
 <div style="font-size:var(--fs-body);color:var(--muted);">How Balanced as Designed evolved from within the AADEK Consulting Group to earn its own identity and digital presence.</div>
 </div>
 <a href="our-story.html" onmouseout="this.style.background='rgba(47,184,121,0.1)'" onmouseover="this.style.background='rgba(47,184,121,0.18)'" style="display:inline-flex;align-items:center;gap:8px;background:rgba(47,184,121,0.1);border:1px solid var(--border-green);color:var(--green);font-size:var(--fs-body);font-weight:800;padding:16px 30px;border-radius:10px;white-space:nowrap;transition:all 0.2s;flex-shrink:0;">
@@ -995,7 +980,7 @@ footer{background:#0D1013;padding:60px 0 0;border-top:1px solid var(--border);}
 </div>
 <div class="contact-form reveal-right">
 <div style="margin-bottom:28px;">
-<div style="font-size:22.5px;font-weight:800;color:var(--light);margin-bottom:4px;">Project Enquiry</div>
+<div style="font-size:20.25px;font-weight:800;color:var(--light);margin-bottom:4px;">Project Enquiry</div>
 <div style="font-size:var(--fs-body-sm);color:var(--muted);">We respond to all enquiries within 48 hours.</div>
 </div>
 <form onsubmit="submitForm(event)">
