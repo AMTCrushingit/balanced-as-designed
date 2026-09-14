@@ -350,7 +350,7 @@ nav{
 
 /* ─── PROJECTS ──────────────────────────────────────────────── */
 /* ─── PROJECTS — vertical timeline ──────────────────────────── */
-.projects-section{background:#0D1013;position:relative;overflow:hidden;}
+.projects-section{background:#F7F6F2;position:relative;overflow:hidden;}
 .projects-section::before{
   content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);
   width:1px;height:100%;
@@ -360,7 +360,7 @@ nav{
 .project-row{
   display:grid;grid-template-columns:1fr 60px 1fr;
   align-items:center;padding:32px 0;
-  border-bottom:1px solid rgba(255,255,255,0.04);
+  border-bottom:1px solid rgba(26,30,33,0.08);
 }
 .project-row:last-child{border-bottom:none;}
 .project-row.left .project-content{grid-column:1;text-align:right;padding-right:40px;}
@@ -380,7 +380,7 @@ nav{
 }
 .project-name{
   font-family:"Manrope",sans-serif;font-size:18px;font-weight:800;
-  color:#F7F6F2;line-height:1.25;margin-bottom:10px;
+  color:#1A1E21;line-height:1.25;margin-bottom:10px;
 }
 .project-tag{
   display:inline-flex;align-items:center;gap:5px;
@@ -401,15 +401,15 @@ nav{
 
 /* ─── SECTORS ───────────────────────────────────────────────── */
 .sectors-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
-.sector-card{background:var(--dark3);border:1px solid var(--border);border-radius:14px;padding:28px 22px;text-align:center;transition:all 0.2s;}
+.sector-card{background:#fff;border:1px solid #e8e8e6;border-radius:14px;padding:28px 22px;text-align:center;transition:all 0.2s;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
 .sector-card:hover{border-color:var(--border-green);transform:translateY(-3px);}
 .sector-icon{font-size:40px;margin-bottom:12px;}
-.sector-name{font-size:var(--fs-body);font-weight:800;color:var(--light);margin-bottom:6px;}
-.sector-desc{font-size:var(--fs-body-sm);color:var(--muted);line-height:1.5;}
+.sector-name{font-size:var(--fs-body);font-weight:800;color:#1A1E21;margin-bottom:6px;}
+.sector-desc{font-size:var(--fs-body-sm);color:rgba(26,30,33,0.6);line-height:1.5;}
 
 /* ─── WHY ───────────────────────────────────────────────────── */
 .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
-.why-card{padding:28px 22px;border-left:3px solid var(--green);background:var(--dark2);border-radius:0 12px 12px 0;}
+.why-card{padding:28px 22px;border-left:3px solid var(--green);background:#22272B;border-radius:0 12px 12px 0;}
 .why-num{font-family:"Sora",sans-serif;font-size:40.5px;font-weight:900;color:rgba(47,184,121,0.15);line-height:1;margin-bottom:10px;}
 .why-title{font-size:16.9px;font-weight:800;color:var(--light);margin-bottom:8px;}
 .why-desc{font-size:var(--fs-body-sm);color:var(--muted);line-height:1.7;}
@@ -429,17 +429,17 @@ nav{
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
 .contact-item{display:flex;align-items:flex-start;gap:16px;margin-bottom:24px;}
 .contact-icon{width:50px;height:50px;border-radius:10px;background:rgba(47,184,121,0.1);border:1px solid var(--border-green);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}
-.contact-label{font-size:var(--fs-footer-lbl);font-weight:800;text-transform:uppercase;letter-spacing:2px;color:var(--green);margin-bottom:4px;}
-.contact-value{font-size:16.9px;color:var(--light);font-weight:600;}
-.contact-form{background:var(--dark2);border:1px solid var(--border);border-radius:20px;padding:40px;}
+.contact-label{font-size:var(--fs-footer-lbl);font-weight:800;text-transform:uppercase;letter-spacing:2px;color:#2FB879;margin-bottom:4px;}
+.contact-value{font-size:16.9px;color:#1A1E21;font-weight:600;}
+.contact-form{background:#fff;border:1px solid #e8e8e6;border-radius:20px;padding:40px;box-shadow:0 4px 24px rgba(0,0,0,0.08);}
 .form-group{margin-bottom:20px;}
-.form-label{display:block;font-size:15px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
-.form-input{width:100%;padding:15px 18px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:8px;font-size:var(--fs-body);color:var(--light);font-family:"Plus Jakarta Sans",sans-serif;transition:border-color 0.2s;outline:none;}
+.form-label{display:block;font-size:15px;font-weight:700;color:rgba(26,30,33,0.55);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.form-input{width:100%;padding:15px 18px;background:#f8f8f6;border:1px solid #e0e0de;border-radius:8px;font-size:var(--fs-body);color:#1A1E21;font-family:"Plus Jakarta Sans",sans-serif;transition:border-color 0.2s;outline:none;}
 .form-input:focus{border-color:var(--green);}
 .form-input::placeholder{color:var(--slate);}
-.form-select{width:100%;padding:15px 18px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:8px;font-size:var(--fs-body);color:var(--light);font-family:"Plus Jakarta Sans",sans-serif;outline:none;appearance:none;}
+.form-select{width:100%;padding:15px 18px;background:#f8f8f6;border:1px solid #e0e0de;border-radius:8px;font-size:var(--fs-body);color:#1A1E21;font-family:"Plus Jakarta Sans",sans-serif;outline:none;appearance:none;}
 .form-select option{background:#22272B;}
-.form-textarea{width:100%;padding:15px 18px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:8px;font-size:var(--fs-body);color:var(--light);font-family:"Plus Jakarta Sans",sans-serif;resize:vertical;min-height:130px;outline:none;transition:border-color 0.2s;}
+.form-textarea{width:100%;padding:15px 18px;background:#f8f8f6;border:1px solid #e0e0de;border-radius:8px;font-size:var(--fs-body);color:#1A1E21;font-family:"Plus Jakarta Sans",sans-serif;resize:vertical;min-height:130px;outline:none;transition:border-color 0.2s;}
 .form-textarea:focus{border-color:var(--green);}
 .form-textarea::placeholder{color:var(--slate);}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
@@ -451,7 +451,7 @@ footer{background:#0D1013;padding:60px 0 0;border-top:1px solid var(--border);}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;padding-bottom:48px;}
 
 /* footer logo mirrors nav logo */
-.footer-logo-balanced{font-family:"Cormorant Garamond",Georgia,serif;font-size:23.4px;font-weight:700;color:#1F6B4D;letter-spacing:0.5px;line-height:1;}
+.footer-logo-balanced{font-family:"Montserrat",sans-serif;font-size:20px;font-weight:700;color:#F7F6F2;letter-spacing:3px;text-transform:uppercase;line-height:1;}
 .footer-logo-as{font-family:"Montserrat",sans-serif;font-size:14px;font-style:italic;font-weight:400;color:#2FB879;line-height:1.2;margin-top:3px;}
 .footer-logo-divider{display:flex;align-items:center;margin:5px 0 4px;}
 .footer-logo-divider-line{flex:1;height:1px;background:var(--gold);max-width:120px;}
@@ -669,7 +669,7 @@ Balanced as Designed provides specialist Testing, Adjusting &amp; Balancing (TAB
 <div class="hero-stat-label" style="font-size:var(--fs-body);font-weight:800;color:var(--green);margin-top:0;">HVAC Commissioning</div>
 </div>
 <div>
-<div class="hero-stat-label" style="font-size:var(--fs-body);font-weight:800;color:var(--green);margin-top:0;">The Bahamas + the Caribbean</div>
+<div class="hero-stat-label" style="font-size:var(--fs-body);font-weight:800;color:var(--green);margin-top:0;">The Bahamas + Caribbean</div>
 </div>
 </div>
 </div>
@@ -702,7 +702,7 @@ Balanced as Designed provides specialist Testing, Adjusting &amp; Balancing (TAB
       </div>
       <div class="trust-logo-item">
         <img src="lyf.png" alt="Lyford Cay" class="trust-logo-img"/>
-        <span class="trust-logo-name">Lyford Cay</span>
+        <span class="trust-logo-name">Lyford Cay Club</span>
       </div>
     </div>
   </div>
@@ -844,47 +844,100 @@ Balanced as Designed provides specialist Testing, Adjusting &amp; Balancing (TAB
 </div>
 </section>
 <!-- ══════════════════════════════════════════════════════════
-     TAB vs COMMISSIONING
+     TAB vs COMMISSIONING — interactive tabs
 ══════════════════════════════════════════════════════════ -->
-<section class="section-sm" style="background:var(--dark2);">
-<div class="wrap">
-<div class="reveal" style="text-align:center;margin-bottom:48px;">
-<h2 class="h2">TAB vs. Commissioning</h2>
-<p class="lead" style="max-width:560px;margin:16px auto 0;">Both services verify performance. The difference is scope and timing. Many projects benefit from both.</p>
-</div>
-<div class="compare-grid reveal">
-<div class="compare-card tab">
-<span class="compare-tag green">Testing, Adjusting and Balancing</span>
-<h3 class="h3" style="margin-bottom:8px;">TAB</h3>
-<p style="font-size:var(--fs-body-sm);color:var(--muted);line-height:1.7;margin-bottom:16px;">Focused on measuring and adjusting airflow, water flow, and equipment performance to match design values. Typically performed at project completion before handover.</p>
-<ul class="compare-list">
-<li>Airflow measurement at every terminal device</li>
-<li>Hydronic system flow balancing</li>
-<li>Fan and pump performance verification</li>
-<li>Zone-by-zone balancing to design specs</li>
-<li>Deficiency identification and reporting</li>
-<li>Energy benchmarking baseline data</li>
-<li>Operator training on balanced systems</li>
-</ul>
-<div style="margin-top:20px;padding:14px 18px;background:rgba(47,184,121,0.06);border-radius:8px;font-size:var(--fs-body-sm);color:var(--green);font-weight:700;">Best for: New construction handover, existing building troubleshooting, energy audits</div>
-</div>
-<div class="compare-card cx">
-<span class="compare-tag gold">HVAC Commissioning</span>
-<h3 class="h3" style="margin-bottom:8px;">Commissioning</h3>
-<p style="font-size:var(--fs-body-sm);color:var(--muted);line-height:1.7;margin-bottom:16px;">A broader quality assurance process that spans the entire project lifecycle, from design review through construction and into operation. Includes TAB as one component.</p>
-<ul class="compare-list">
-<li>Owner's Project Requirements development</li>
-<li>Design document review and verification</li>
-<li>Construction phase site observations</li>
-<li>Equipment startup and pre-functional testing</li>
-<li>Functional performance testing</li>
-<li>Controls and BMS verification</li>
-<li>Seasonal and deferred testing</li>
-</ul>
-<div style="margin-top:20px;padding:14px 18px;background:rgba(214,161,64,0.06);border-radius:8px;font-size:var(--fs-body-sm);color:var(--gold);font-weight:700;">Best for: New construction, LEED certification, complex HVAC systems, owner protection</div>
-</div>
-</div>
-</div>
+<section class="section-sm" style="background:#ffffff;">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:40px;">
+      <h2 class="h2" style="color:#1A1E21;">TAB vs. Commissioning</h2>
+      <p class="lead" style="max-width:560px;margin:16px auto 0;color:rgba(26,30,33,0.65);">Both services verify performance. The difference is scope and timing. Many projects benefit from both.</p>
+    </div>
+
+    <!-- Tab switcher -->
+    <div style="display:flex;justify-content:center;margin-bottom:36px;">
+      <div style="display:flex;background:#f0f0ee;border-radius:12px;padding:5px;gap:4px;">
+        <button id="tabBtn1" onclick="switchTab(1)"
+          style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:12px 32px;border-radius:9px;border:none;cursor:pointer;transition:all 0.3s;background:#1A1E21;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+          TAB
+        </button>
+        <button id="tabBtn2" onclick="switchTab(2)"
+          style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:12px 32px;border-radius:9px;border:none;cursor:pointer;transition:all 0.3s;background:transparent;color:rgba(26,30,33,0.5);">
+          Commissioning
+        </button>
+      </div>
+    </div>
+
+    <!-- Tab panels -->
+    <div style="position:relative;min-height:360px;">
+
+      <!-- TAB panel -->
+      <div id="tabPanel1" style="transition:opacity 0.4s,transform 0.4s;opacity:1;transform:translateY(0);">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;">
+          <div style="background:#f8f8f6;border-radius:16px;padding:36px;border-left:4px solid #2FB879;">
+            <h3 style="font-family:'Manrope',sans-serif;font-size:22px;font-weight:800;color:#1A1E21;margin-bottom:8px;">Testing, Adjusting &amp; Balancing</h3>
+            <p style="font-size:15px;color:rgba(26,30,33,0.65);line-height:1.7;margin-bottom:20px;">Focused on measuring and adjusting airflow, water flow, and equipment performance to match design values. Typically performed at project completion before handover.</p>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:rgba(26,30,33,0.75);"><span style="color:#2FB879;font-weight:800;flex-shrink:0;">✓</span>Airflow measurement at every terminal device</li>
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:rgba(26,30,33,0.75);"><span style="color:#2FB879;font-weight:800;flex-shrink:0;">✓</span>Hydronic system flow balancing</li>
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:rgba(26,30,33,0.75);"><span style="color:#2FB879;font-weight:800;flex-shrink:0;">✓</span>Fan and pump performance verification</li>
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:rgba(26,30,33,0.75);"><span style="color:#2FB879;font-weight:800;flex-shrink:0;">✓</span>Zone-by-zone balancing to design specs</li>
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:rgba(26,30,33,0.75);"><span style="color:#2FB879;font-weight:800;flex-shrink:0;">✓</span>Deficiency identification and reporting</li>
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:rgba(26,30,33,0.75);"><span style="color:#2FB879;font-weight:800;flex-shrink:0;">✓</span>Energy benchmarking baseline data</li>
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:rgba(26,30,33,0.75);"><span style="color:#2FB879;font-weight:800;flex-shrink:0;">✓</span>Operator training on balanced systems</li>
+            </ul>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:20px;padding-top:8px;">
+            <div style="background:#2FB879;border-radius:12px;padding:24px 28px;">
+              <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:6px;">Best For</div>
+              <div style="font-size:16px;font-weight:700;color:#fff;line-height:1.5;">New construction handover, existing building troubleshooting, energy audits</div>
+            </div>
+            <div style="background:#f8f8f6;border-radius:12px;padding:24px 28px;border:1px solid #e8e8e6;">
+              <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(26,30,33,0.4);margin-bottom:6px;">Timing</div>
+              <div style="font-size:16px;font-weight:700;color:#1A1E21;">At project completion, before handover</div>
+            </div>
+            <div style="background:#f8f8f6;border-radius:12px;padding:24px 28px;border:1px solid #e8e8e6;">
+              <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(26,30,33,0.4);margin-bottom:6px;">Report Delivery</div>
+              <div style="font-size:16px;font-weight:700;color:#1A1E21;">Within 48 hours of field completion</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Commissioning panel -->
+      <div id="tabPanel2" style="position:absolute;top:0;left:0;right:0;transition:opacity 0.4s,transform 0.4s;opacity:0;transform:translateY(16px);pointer-events:none;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;">
+          <div style="background:#f8f8f6;border-radius:16px;padding:36px;border-left:4px solid #D6A140;">
+            <h3 style="font-family:'Manrope',sans-serif;font-size:22px;font-weight:800;color:#1A1E21;margin-bottom:8px;">HVAC Commissioning</h3>
+            <p style="font-size:15px;color:rgba(26,30,33,0.65);line-height:1.7;margin-bottom:20px;">A broader quality assurance process spanning the entire project lifecycle, from design review through construction and into operation. Includes TAB as one component.</p>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:rgba(26,30,33,0.75);"><span style="color:#D6A140;font-weight:800;flex-shrink:0;">✓</span>Owner's Project Requirements development</li>
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:rgba(26,30,33,0.75);"><span style="color:#D6A140;font-weight:800;flex-shrink:0;">✓</span>Design document review and verification</li>
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:rgba(26,30,33,0.75);"><span style="color:#D6A140;font-weight:800;flex-shrink:0;">✓</span>Construction phase site observations</li>
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:rgba(26,30,33,0.75);"><span style="color:#D6A140;font-weight:800;flex-shrink:0;">✓</span>Equipment startup and pre-functional testing</li>
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:rgba(26,30,33,0.75);"><span style="color:#D6A140;font-weight:800;flex-shrink:0;">✓</span>Functional performance testing</li>
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:rgba(26,30,33,0.75);"><span style="color:#D6A140;font-weight:800;flex-shrink:0;">✓</span>Controls and BMS verification</li>
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:rgba(26,30,33,0.75);"><span style="color:#D6A140;font-weight:800;flex-shrink:0;">✓</span>Seasonal and deferred testing</li>
+            </ul>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:20px;padding-top:8px;">
+            <div style="background:#D6A140;border-radius:12px;padding:24px 28px;">
+              <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:6px;">Best For</div>
+              <div style="font-size:16px;font-weight:700;color:#fff;line-height:1.5;">New construction, LEED certification, complex HVAC systems, owner protection</div>
+            </div>
+            <div style="background:#f8f8f6;border-radius:12px;padding:24px 28px;border:1px solid #e8e8e6;">
+              <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(26,30,33,0.4);margin-bottom:6px;">Timing</div>
+              <div style="font-size:16px;font-weight:700;color:#1A1E21;">From pre-design through seasonal operation</div>
+            </div>
+            <div style="background:#f8f8f6;border-radius:12px;padding:24px 28px;border:1px solid #e8e8e6;">
+              <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(26,30,33,0.4);margin-bottom:6px;">Energy Savings</div>
+              <div style="font-size:16px;font-weight:700;color:#1A1E21;">8–20% less energy vs non-commissioned buildings</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
 <!-- ══════════════════════════════════════════════════════════
      IMAGE BAND 2
@@ -903,7 +956,7 @@ Balanced as Designed provides specialist Testing, Adjusting &amp; Balancing (TAB
 <!-- ══════════════════════════════════════════════════════════
      PROJECTS
 ══════════════════════════════════════════════════════════ -->
-<section class="section projects-section" id="projects">
+<section class="section projects-section" id="projects" style="background:#F7F6F2;">
 <div class="wrap">
 <div class="reveal" style="text-align:center;margin-bottom:16px;">
 <h2 class="h2">Projects</h2>
@@ -1046,7 +1099,7 @@ Balanced as Designed provides specialist Testing, Adjusting &amp; Balancing (TAB
 <!-- ══════════════════════════════════════════════════════════
      SECTORS
 ══════════════════════════════════════════════════════════ -->
-<section class="section-sm" id="sectors" style="background:var(--dark2);">
+<section class="section-sm" id="sectors" style="background:#F7F6F2;">
 <div class="wrap">
 <div class="reveal" style="text-align:center;margin-bottom:48px;">
 <h2 class="h2">Sectors</h2>
@@ -1083,7 +1136,7 @@ Balanced as Designed provides specialist Testing, Adjusting &amp; Balancing (TAB
 <!-- ══════════════════════════════════════════════════════════
      CONTACT
 ══════════════════════════════════════════════════════════ -->
-<section class="section" id="contact" style="background:var(--black);">
+<section class="section" id="contact" style="background:#F7F6F2;">
 <div class="wrap">
 <div class="reveal" style="text-align:center;margin-bottom:64px;">
 <h2 class="h2">Request an Assessment</h2>
@@ -1107,7 +1160,7 @@ Balanced as Designed provides specialist Testing, Adjusting &amp; Balancing (TAB
 <div class="contact-icon">🏛</div>
 <div><div class="contact-label">Licensed Oversight</div><div class="contact-value">Karen Myers-Rolle, PE</div></div>
 </div>
-<div style="margin-top:32px;padding:26px;background:var(--dark2);border:1px solid var(--border-green);border-radius:14px;">
+<div style="margin-top:32px;padding:26px;background:#fff;border:1px solid rgba(47,184,121,0.3);border-radius:14px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
 <div style="font-size:var(--fs-body-sm);font-weight:800;color:var(--green);margin-bottom:12px;">PE-Licensed Leadership</div>
 <div style="font-size:var(--fs-body-sm);color:var(--muted);line-height:1.7;">Balanced as Designed is led by Karen Myers-Rolle, PE — a dual-licensed Professional Engineer with decades of Caribbean mechanical engineering experience.</div>
 </div>
@@ -1117,16 +1170,16 @@ Balanced as Designed provides specialist Testing, Adjusting &amp; Balancing (TAB
 <div style="font-size:20.25px;font-weight:800;color:var(--light);margin-bottom:4px;">Project Enquiry</div>
 <div style="font-size:var(--fs-body-sm);color:var(--muted);">We respond to all enquiries within 48 hours.</div>
 </div>
-<form onsubmit="submitForm(event)">
+<form action="https://formspree.io/f/xpwzgkqb" method="POST" onsubmit="submitForm(event)">
 <div class="form-row">
 <div class="form-group"><label class="form-label">First Name</label><input class="form-input" placeholder="John" required="" type="text"/></div>
 <div class="form-group"><label class="form-label">Last Name</label><input class="form-input" placeholder="Smith" required="" type="text"/></div>
 </div>
 <div class="form-group"><label class="form-label">Email Address</label><input class="form-input" placeholder="you@company.com" required="" type="email"/></div>
-<div class="form-group"><label class="form-label">Organisation</label><input class="form-input" placeholder="Company or project name" type="text"/></div>
+<div class="form-group"><label class="form-label">Organisation</label><input class="form-input" name="organisation" placeholder="Company or project name" type="text"/></div>
 <div class="form-group">
 <label class="form-label">Service Required</label>
-<select class="form-select">
+<select class="form-select" name="service">
 <option value="">Select a service</option>
 <option>Testing, Adjusting and Balancing (TAB)</option>
 <option>HVAC Commissioning</option>
@@ -1136,7 +1189,7 @@ Balanced as Designed provides specialist Testing, Adjusting &amp; Balancing (TAB
 <option>Not sure, need advice</option>
 </select>
 </div>
-<div class="form-group"><label class="form-label">Project Description</label><textarea class="form-textarea" placeholder="Brief description of your project, building type, location, and timeline..."></textarea></div>
+<div class="form-group"><label class="form-label">Project Description</label><textarea class="form-textarea" name="project_description" placeholder="Brief description of your project, building type, location, and timeline..."></textarea></div>
 <button class="submit-btn" type="submit">Submit Enquiry</button>
 <p style="font-size:var(--fs-footer-lbl);color:var(--slate);text-align:center;margin-top:12px;">We respond within 48 hours. All enquiries are confidential.</p>
 </form>
@@ -1151,15 +1204,20 @@ Balanced as Designed provides specialist Testing, Adjusting &amp; Balancing (TAB
 <div class="wrap">
 <div class="footer-grid">
 <div>
-<!-- Footer logo mirrors nav logo -->
-<div class="footer-logo-balanced">BALANCED</div>
-<div class="footer-logo-as">as designed</div>
-<div class="footer-logo-divider">
-<div class="footer-logo-divider-line"></div>
-<div class="footer-logo-divider-dot"></div>
-<div class="footer-logo-divider-line"></div>
+<!-- Footer logo — exact match to header -->
+<div style="display:flex;align-items:center;gap:14px;margin-bottom:4px;">
+  <img src="logomark.png" srcset="logomark.png 1x, logomark@2x.png 2x" alt="Balanced as Designed logomark" style="width:56px;height:56px;object-fit:contain;flex-shrink:0;"/>
+  <div style="display:flex;flex-direction:column;justify-content:center;">
+    <div class="footer-logo-balanced">BALANCED</div>
+    <div class="footer-logo-as">as designed</div>
+    <div class="footer-logo-divider">
+      <div class="footer-logo-divider-line"></div>
+      <div class="footer-logo-divider-dot"></div>
+      <div class="footer-logo-divider-line"></div>
+    </div>
+    <div class="footer-logo-descriptor">TAB <span class="plus">+</span> HVAC Commissioning</div>
+  </div>
 </div>
-<div class="footer-logo-descriptor">TAB <span class="plus">+</span> HVAC Commissioning</div>
 <p class="footer-desc">Specialist Testing, Adjusting and Balancing (TAB) and HVAC Commissioning services for the Bahamas and Caribbean. We verify that your mechanical systems perform as designed.</p>
 <div style="margin-top:16px;"></div>
 </div>
@@ -1220,6 +1278,26 @@ window.addEventListener('scroll',function(){
   if(window.scrollY>50){nav.style.borderBottomColor='rgba(255,255,255,0.06)';}
   else{nav.style.borderBottomColor='rgba(255,255,255,0.08)';}
 });
+
+
+/* ── Tab switcher ── */
+function switchTab(n){
+  var p1=document.getElementById('tabPanel1');
+  var p2=document.getElementById('tabPanel2');
+  var b1=document.getElementById('tabBtn1');
+  var b2=document.getElementById('tabBtn2');
+  if(n===1){
+    p1.style.opacity='1';p1.style.transform='translateY(0)';p1.style.pointerEvents='auto';
+    p2.style.opacity='0';p2.style.transform='translateY(16px)';p2.style.pointerEvents='none';
+    b1.style.background='#1A1E21';b1.style.color='#fff';b1.style.boxShadow='0 2px 8px rgba(0,0,0,0.15)';
+    b2.style.background='transparent';b2.style.color='rgba(26,30,33,0.5)';b2.style.boxShadow='none';
+  } else {
+    p2.style.opacity='1';p2.style.transform='translateY(0)';p2.style.pointerEvents='auto';
+    p1.style.opacity='0';p1.style.transform='translateY(16px)';p1.style.pointerEvents='none';
+    b2.style.background='#1A1E21';b2.style.color='#fff';b2.style.boxShadow='0 2px 8px rgba(0,0,0,0.15)';
+    b1.style.background='transparent';b1.style.color='rgba(26,30,33,0.5)';b1.style.boxShadow='none';
+  }
+}
 
 /* ── Form submit ── */
 function submitForm(e){
