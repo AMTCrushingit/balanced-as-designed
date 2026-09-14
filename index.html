@@ -76,8 +76,8 @@
 <!-- ═══ PERFORMANCE — Fonts ═══ -->
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,400&family=Manrope:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;600;700&family=Sora:wght@900&display=swap"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,400&family=Manrope:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;600;700&family=Sora:wght@900&display=swap" rel="stylesheet"/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,400&family=Manrope:wght@700;800;900&family=Montserrat:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;600;700&family=Sora:wght@900&display=swap"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,400&family=Manrope:wght@700;800;900&family=Montserrat:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;600;700&family=Sora:wght@900&display=swap" rel="stylesheet"/>
 
 <!-- ═══ PERFORMANCE — Hero image preload ═══ -->
 <link rel="preload" as="image" href="AA_hvac.jpg"/>
@@ -145,73 +145,80 @@ nav{
   border-bottom:1px solid var(--border);
 }
 
-/* ══ LOGOMARK — matches Designer(3).png exactly ══ */
-.nav-logo{display:flex;align-items:center;gap:20px;cursor:pointer;text-decoration:none;}
+/* ══ LOGOMARK ══ */
+.nav-logo{display:flex;align-items:center;gap:18px;cursor:pointer;text-decoration:none;}
 
-.logomark{width:80px;height:80px;flex-shrink:0;}
-.logomark svg{width:80px;height:80px;overflow:visible;}
+/* circular logomark — 80px */
+.logomark{width:80px;height:80px;flex-shrink:0;position:relative;}
+.logomark svg{width:80px;height:80px;}
 
-/* wave layers animate independently */
-.lm-w1{animation:waveFloat 3.6s ease-in-out infinite 0s;}
-.lm-w2{animation:waveFloat 3.6s ease-in-out infinite 0.3s;}
-.lm-w3{animation:waveFloat 3.6s ease-in-out infinite 0.6s;}
-.lm-w4{animation:waveFloat 3.6s ease-in-out infinite 0.9s;}
-.lm-w5{animation:waveFloat 3.6s ease-in-out infinite 1.2s;}
+/* airflow arc layers — staggered float */
+.lm-w1{animation:waveFloat 4s ease-in-out infinite 0s;transform-origin:40px 40px;}
+.lm-w2{animation:waveFloat 4s ease-in-out infinite 0.35s;transform-origin:40px 40px;}
+.lm-w3{animation:waveFloat 4s ease-in-out infinite 0.7s;transform-origin:40px 40px;}
+.lm-w4{animation:waveFloat 4s ease-in-out infinite 1.05s;transform-origin:40px 40px;}
+.lm-w5{animation:waveFloat 4s ease-in-out infinite 1.4s;transform-origin:40px 40px;}
 
-/* crosshair rotates slowly */
-.lm-cross{animation:goldSpin 12s linear infinite;transform-origin:26px 26px;}
+/* gold crosshair — slow rotation */
+.lm-cross{animation:goldSpin 16s linear infinite;transform-origin:40px 40px;}
 
-/* arc draws on load */
+/* gold arc — draws in on load */
 .lm-arc{
-  stroke-dasharray:160;stroke-dashoffset:160;
-  animation:arcDraw 1.8s ease-out forwards 0.4s;
+  stroke-dasharray:200;
+  stroke-dashoffset:200;
+  animation:arcDraw 2s ease-out forwards 0.5s;
 }
 
 /* ── Wordmark ── */
-.nav-wordmark{display:flex;flex-direction:column;line-height:1;}
+.nav-wordmark{
+  display:flex;flex-direction:column;
+  justify-content:center;
+  gap:0;
+}
 
-/* "Balanced" — bold dark-green serif, matching logo */
+/* BALANCED — Montserrat Bold, all caps, off-white */
 .nav-wm-balanced{
-  font-family:"Cormorant Garamond",Georgia,serif;
-  font-size:var(--fs-nav-name);
+  font-family:"Montserrat",sans-serif;
+  font-size:calc(var(--fs-nav-name) * 1.05);
   font-weight:700;
-  color:#F7F6F2;   /* off-white */
-  letter-spacing:0.5px;
-  line-height:1;
-}
-
-/* "as designed" — italic script green */
-.nav-wm-as{
-  font-family:"Cormorant Garamond",Georgia,serif;
-  font-size:calc(var(--fs-nav-name) * 0.78);
-  font-style:italic;
-  font-weight:400;
-  color:#D6A140;
-  letter-spacing:0.3px;
-  line-height:1.1;
-  margin-top:1px;
-}
-
-/* gold divider line with centre dot */
-.nav-wm-divider{
-  display:flex;align-items:center;gap:0;
-  margin:4px 0 3px;
-}
-.nav-wm-divider-line{flex:1;height:1px;background:var(--gold);}
-.nav-wm-divider-dot{width:4px;height:4px;border-radius:50%;background:var(--gold);margin:0 4px;flex-shrink:0;}
-
-/* descriptor */
-.nav-wm-descriptor{
-  font-family:"Plus Jakarta Sans",sans-serif;
-  font-size:var(--fs-nav-sub);
-  font-weight:800;
-  color:#2FB879;
-  letter-spacing:2.5px;
+  color:#F7F6F2;
+  letter-spacing:3px;
   text-transform:uppercase;
   line-height:1;
 }
-/* gold + sign in descriptor */
-.nav-wm-descriptor .plus{color:var(--gold);}
+
+/* as designed — Montserrat Italic (Avenir Next substitute), green */
+.nav-wm-as{
+  font-family:"Montserrat",sans-serif;
+  font-size:calc(var(--fs-nav-name) * 0.62);
+  font-style:italic;
+  font-weight:400;
+  color:#2FB879;
+  letter-spacing:1.5px;
+  line-height:1.2;
+  margin-top:2px;
+}
+
+/* divider — thin gold line with centre dot */
+.nav-wm-divider{
+  display:flex;align-items:center;
+  margin:4px 0;
+}
+.nav-wm-divider-line{flex:1;height:1px;background:#D6A140;opacity:0.7;}
+.nav-wm-divider-dot{width:3px;height:3px;border-radius:50%;background:#D6A140;margin:0 5px;flex-shrink:0;}
+
+/* TAB + HVAC COMMISSIONING — Montserrat Medium, small caps */
+.nav-wm-descriptor{
+  font-family:"Montserrat",sans-serif;
+  font-size:calc(var(--fs-nav-name) * 0.38);
+  font-weight:500;
+  color:#F7F6F2;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  line-height:1;
+  opacity:0.85;
+}
+.nav-wm-descriptor .plus{color:#D6A140;font-weight:700;}
 
 /* nav links */
 .nav-links{display:flex;align-items:center;gap:26px;}
@@ -465,12 +472,12 @@ footer{background:#0D1013;padding:60px 0 0;border-top:1px solid var(--border);}
 
 /* footer logo mirrors nav logo */
 .footer-logo-balanced{font-family:"Cormorant Garamond",Georgia,serif;font-size:23.4px;font-weight:700;color:#1F6B4D;letter-spacing:0.5px;line-height:1;}
-.footer-logo-as{font-family:"Cormorant Garamond",Georgia,serif;font-size:18px;font-style:italic;font-weight:400;color:#D6A140;line-height:1.1;margin-top:1px;}
+.footer-logo-as{font-family:"Montserrat",sans-serif;font-size:14px;font-style:italic;font-weight:400;color:#2FB879;line-height:1.2;margin-top:3px;}
 .footer-logo-divider{display:flex;align-items:center;margin:5px 0 4px;}
 .footer-logo-divider-line{flex:1;height:1px;background:var(--gold);max-width:120px;}
 .footer-logo-divider-dot{width:4px;height:4px;border-radius:50%;background:var(--gold);margin:0 4px;}
 .footer-logo-descriptor{font-size:10px;font-weight:800;color:#1F6B4D;letter-spacing:2.5px;text-transform:uppercase;}
-.footer-logo-descriptor .plus{color:var(--gold);}
+.footer-logo-descriptor .plus{color:#D6A140;font-weight:700;}
 
 .footer-desc{font-size:var(--fs-body-sm);color:var(--muted);line-height:1.7;margin-top:14px;}
 .footer-heading{font-size:var(--fs-footer-lbl);font-weight:800;text-transform:uppercase;letter-spacing:2px;color:var(--slate);margin-bottom:16px;}
@@ -520,51 +527,84 @@ footer{background:#0D1013;padding:60px 0 0;border-top:1px solid var(--border);}
 <nav id="mainNav">
 <!-- Logo -->
 <a class="nav-logo" href="#home">
-<!-- SVG Logomark — circular wave layers + gold crosshair + gold arc -->
-<div class="logomark">
-<svg fill="none" viewbox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<clippath id="circClip">
-<circle cx="26" cy="26" r="23"></circle>
-</clippath>
-<lineargradient id="arcGrad" x1="0" x2="1" y1="0" y2="1">
-<stop offset="0%" stop-color="#D6A140"></stop>
-<stop offset="100%" stop-color="#f0c878"></stop>
-</lineargradient>
-</defs>
-<!-- Wave fill layers clipped to circle -->
-<g clip-path="url(#circClip)">
-<!-- deep emerald top -->
-<g class="lm-w1">
-<ellipse cx="26" cy="10" fill="#0f3d20" rx="22" ry="10"></ellipse>
-</g>
-<g class="lm-w2">
-<ellipse cx="26" cy="18" fill="#1F6B4D" rx="22" ry="10"></ellipse>
-</g>
-<g class="lm-w3">
-<ellipse cx="26" cy="26" fill="#2FB879" rx="22" ry="10"></ellipse>
-</g>
-<g class="lm-w4">
-<ellipse cx="26" cy="34" fill="#5dd4a0" opacity="0.85" rx="22" ry="10"></ellipse>
-</g>
-<g class="lm-w5">
-<ellipse cx="26" cy="42" fill="#9eeacc" opacity="0.6" rx="22" ry="10"></ellipse>
-</g>
-</g>
-<!-- Gold crosshair — thin lines rotating slowly -->
-<g class="lm-cross">
-<line stroke="#D6A140" stroke-opacity="0.65" stroke-width="1" x1="3" x2="49" y1="26" y2="26"></line>
-<line stroke="#D6A140" stroke-opacity="0.65" stroke-width="1" x1="26" x2="26" y1="3" y2="49"></line>
-</g>
-<!-- Gold arc — draws in on load, lower-right quadrant -->
-<circle class="lm-arc" cx="26" cy="26" fill="none" r="21" stroke="url(#arcGrad)" stroke-dasharray="160" stroke-dashoffset="160" stroke-linecap="round" stroke-width="2.2" transform="rotate(45 26 26)"></circle>
-<!-- Outer ring -->
-<circle cx="26" cy="26" fill="none" opacity="0.45" r="23" stroke="#2FB879" stroke-width="1.5"></circle>
-</svg>
-</div>
-<!-- Wordmark -->
+    <!-- SVG Logomark — circular airflow design matching brand logo -->
+    <div class="logomark">
+      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="circClip">
+            <circle cx="40" cy="40" r="36"/>
+          </clipPath>
+          <linearGradient id="arcGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#D6A140"/>
+            <stop offset="100%" stop-color="#e8c070"/>
+          </linearGradient>
+          <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#0f2d1a"/>
+            <stop offset="100%" stop-color="#1a3d28"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Circle background -->
+        <circle cx="40" cy="40" r="38" fill="url(#bgGrad)"/>
+
+        <!-- Airflow arc layers clipped to circle — olive/forest/teal/tan palette -->
+        <g clip-path="url(#circClip)">
+
+          <!-- Layer 1 — dark forest green, top arc -->
+          <g class="lm-w1">
+            <path d="M 8 38 Q 20 10 40 14 Q 60 18 72 38" 
+                  stroke="#1F4D2A" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.9"/>
+          </g>
+
+          <!-- Layer 2 — olive green -->
+          <g class="lm-w2">
+            <path d="M 6 44 Q 18 18 40 22 Q 62 26 74 44"
+                  stroke="#4A6741" stroke-width="6.5" fill="none" stroke-linecap="round" opacity="0.85"/>
+          </g>
+
+          <!-- Layer 3 — warm tan/beige -->
+          <g class="lm-w3">
+            <path d="M 6 50 Q 18 26 40 30 Q 62 34 74 50"
+                  stroke="#8B7D5A" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.8"/>
+          </g>
+
+          <!-- Layer 4 — sage/teal green -->
+          <g class="lm-w4">
+            <path d="M 7 56 Q 19 34 40 38 Q 61 42 73 56"
+                  stroke="#2FB879" stroke-width="5.5" fill="none" stroke-linecap="round" opacity="0.75"/>
+          </g>
+
+          <!-- Layer 5 — light mint, bottom -->
+          <g class="lm-w5">
+            <path d="M 8 62 Q 20 42 40 46 Q 60 50 72 62"
+                  stroke="#7DD4B0" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.6"/>
+          </g>
+
+        </g>
+
+        <!-- Gold crosshair — two thin lines, slow rotation -->
+        <g class="lm-cross">
+          <line x1="4" y1="40" x2="76" y2="40" stroke="#D6A140" stroke-width="0.8" stroke-opacity="0.55"/>
+          <line x1="40" y1="4" x2="40" y2="76" stroke="#D6A140" stroke-width="0.8" stroke-opacity="0.55"/>
+        </g>
+
+        <!-- Gold arc — draws in on load, partial circle lower-right -->
+        <circle class="lm-arc"
+          cx="40" cy="40" r="33"
+          stroke="url(#arcGrad)" stroke-width="2"
+          fill="none" stroke-linecap="round"
+          stroke-dasharray="200" stroke-dashoffset="200"
+          transform="rotate(120 40 40)"/>
+
+        <!-- Outer circle border -->
+        <circle cx="40" cy="40" r="38" stroke="#2FB879" stroke-width="1.2" fill="none" opacity="0.4"/>
+        <!-- Inner circle border -->
+        <circle cx="40" cy="40" r="34" stroke="#D6A140" stroke-width="0.6" fill="none" opacity="0.3"/>
+      </svg>
+    </div>
+    <!-- Wordmark -->
 <div class="nav-wordmark">
-<div class="nav-wm-balanced">Balanced</div>
+<div class="nav-wm-balanced">BALANCED</div>
 <div class="nav-wm-as">as designed</div>
 <div class="nav-wm-divider">
 <div class="nav-wm-divider-line"></div>
@@ -1077,7 +1117,7 @@ Balanced as Designed provides specialist Testing, Adjusting &amp; Balancing (TAB
 <div class="footer-grid">
 <div>
 <!-- Footer logo mirrors nav logo -->
-<div class="footer-logo-balanced">Balanced</div>
+<div class="footer-logo-balanced">BALANCED</div>
 <div class="footer-logo-as">as designed</div>
 <div class="footer-logo-divider">
 <div class="footer-logo-divider-line"></div>
